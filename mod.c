@@ -11,7 +11,7 @@
 void modul(stack_t **head, unsigned int cntr)
 {
 	stack_t *hd;
-	int leng = 0, aux;
+	int leng = 0, x;
 
 	hd = *head;
 
@@ -41,8 +41,8 @@ void modul(stack_t **head, unsigned int cntr)
 		exit(EXIT_FAILURE);
 	}
 
-	aux = hd->next->n % hd->n;
-	hd->next->n = aux;
+	x = hd->next->n % hd->n;
+	hd->next->n = x;
 	*head = hd->next;
 	free(hd);
 }
