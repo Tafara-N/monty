@@ -7,14 +7,14 @@
 
 void freeStack(stack_t *head)
 {
-	stack_t *aux;
+	stack_t *x;
 
-	aux = head;
+	x = head;
 
 	while (head)
 	{
-		aux = head->next;
+		x = head->next;
 		free(head);
-		head = aux;
+		head = x;
 	}
 }
