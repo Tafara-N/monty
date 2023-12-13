@@ -10,14 +10,14 @@
 
 void subs(stack_t **head, unsigned int cntr)
 {
-	stack_t *aux;
+	stack_t *x;
 	int sus, nodes;
 
-	aux = *head;
+	x = *head;
 
-	for (nodes = 0; aux != NULL; nodes++)
+	for (nodes = 0; x != NULL; nodes++)
 	{
-		aux = aux->next;
+		x = x->next;
 	}
 
 	if (nodes < 2)
@@ -29,9 +29,9 @@ void subs(stack_t **head, unsigned int cntr)
 		exit(EXIT_FAILURE);
 	}
 
-	aux = *head;
-	sus = aux->next->n - aux->n;
-	aux->next->n = sus;
-	*head = aux->next;
-	free(aux);
+	x = *head;
+	sus = x->next->n - x->n;
+	x->next->n = sus;
+	*head = x->next;
+	free(x);
 }
