@@ -11,7 +11,7 @@
 void swaps(stack_t **head, unsigned int cntr)
 {
 	stack_t *hd;
-	int leng = 0, aux;
+	int leng = 0, x;
 
 	hd = *head;
 	while (hd)
@@ -30,7 +30,7 @@ void swaps(stack_t **head, unsigned int cntr)
 	}
 
 	hd = *head;
-	aux = hd->n;
+	x = hd->n;
 	hd->n = hd->next->n;
-	hd->next->n = aux;
+	hd->next->n = x;
 }
