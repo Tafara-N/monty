@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 {
 	char *cnt;
 	FILE *fl;
-/*	size_t size = 0;*/
+	size_t size = 0;
 	ssize_t readsLine = 1;
 	stack_t *stack = NULL;
 	unsigned int cntr = 0;
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	while (readsLine > 0)
 	{
 		cnt = NULL;
-/*		readsLine = getline(&cnt, &size, fl); */
+		readsLine = getline(&cnt, &size, fl);
 		bus.cnt = cnt;
 		cntr++;
 
