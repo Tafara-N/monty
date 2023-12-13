@@ -11,7 +11,7 @@
 void adds(stack_t **head, unsigned int cntr)
 {
 	stack_t *hd;
-	int leng = 0, aux;
+	int leng = 0, x;
 
 	hd = *head;
 
@@ -31,8 +31,8 @@ void adds(stack_t **head, unsigned int cntr)
 	}
 
 	hd = *head;
-	aux = hd->n + hd->next->n;
-	hd->next->n = aux;
+	x = hd->n + hd->next->n;
+	hd->next->n = x;
 	*head = hd->next;
 	free(hd);
 }
