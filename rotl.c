@@ -10,15 +10,15 @@
 
 void rotates_top(stack_t **head,  __attribute__((unused)) unsigned int cntr)
 {
-	stack_t *tempo = *head, *aux;
+	stack_t *tempo = *head, *x;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return;
 	}
 
-	aux = (*head)->next;
-	aux->prev = NULL;
+	x = (*head)->next;
+	x->prev = NULL;
 
 	while (tempo->next != NULL)
 	{
@@ -28,5 +28,5 @@ void rotates_top(stack_t **head,  __attribute__((unused)) unsigned int cntr)
 	tempo->next = *head;
 	(*head)->next = NULL;
 	(*head)->prev = tempo;
-	(*head) = aux;
+	(*head) = x;
 }
